@@ -2,7 +2,7 @@
 ### Empleado en: Banda S, Banda UHF, Intercomunicación con computadora.
 [AVANCES Y ANOTACIONES DIA A DIA](https://docs.google.com/document/d/1bW7psUk2b6T97GLkWwQHPA3Kji6ypLHm2-XdxxwD0p8/edit) 
 
-[CARPETA DOCUMENTOS DRIVE Y MINUTAS REUNIONES](https://docs.google.com/document/d/1bW7psUk2b6T97GLkWwQHPA3Kji6ypLHm2-XdxxwD0p8/edit) 
+[CARPETA DOCUMENTOS DRIVE Y MINUTAS REUNIONES](https://drive.google.com/drive/folders/1zYilVdLcld4Jgza2SQsnEI9fMebddU9d?usp=sharing) 
 ## Banda S  
 ### 1era vertiente
 Se tiene entendido que la participación del Pluto SDR deberá de poder enviar y recibir imágenes mediante código C o C ++ haciendo su codificación y decodificación, dejando de lado la interfaz GNU Radio.
