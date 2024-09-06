@@ -1,0 +1,4 @@
+/home/andresflores/Escritorio/TrabajoLinux/PruebasGNURadio/GNUradioTutorial/GeneradorFunciones/build/CMakeFiles/GeneradorFunciones.dir
+/home/andresflores/Escritorio/TrabajoLinux/PruebasGNURadio/GNUradioTutorial/GeneradorFunciones/build/CMakeFiles/edit_cache.dir
+/home/andresflores/Escritorio/TrabajoLinux/PruebasGNURadio/GNUradioTutorial/GeneradorFunciones/build/CMakeFiles/rebuild_cache.dir
+/home/andresflores/Escritorio/TrabajoLinux/PruebasGNURadio/GNUradioTutorial/GeneradorFunciones/build/CMakeFiles/GeneradorFunciones_autogen.dir

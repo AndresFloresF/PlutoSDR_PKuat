@@ -1,0 +1,74 @@
+andresflores@LinuxAndresFlores:~/plutosdr$ ./plutosend output.iq
+* Acquiring IIO context
+* Acquiring AD9361 streaming devices
+* Configuring AD9361 for streaming
+* Acquiring AD9361 phy channel 0
+* Acquiring AD9361 RX lo channel
+* Acquiring AD9361 phy channel 0
+* Acquiring AD9361 TX lo channel
+* Initializing AD9361 IIO streaming channels
+* Enabling IIO streaming channels
+* Creating non-cyclic IIO buffers with 1 MiS
+* Iniciando envió de archivo
+nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 16384
+.nr 0
+* Destroying buffers
+* Disabling streaming channels
+* Destroying context
