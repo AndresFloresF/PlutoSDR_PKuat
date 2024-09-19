@@ -52,37 +52,31 @@ Observar que va demandando el modem satelital acorde a su avance y si esta verti
 
 ## Banda UHF
 Aún se está definiendo cuál es el lugar del Pluto SDR en esta banda, sin embargo parece acercarse a la intercomunicación.
+Se tiene la idea de que es la misma actividad de intercomunicación:
 
-**Status Actual**
-
-Se está trabajando en ello para arrancar
-
-**Actividades desarrolladas**
-- [x] Revisión de repositorio anterior y generar dudas mas anotaciones para próxima reunión. *27 Agosto -4 Septiembre 2024*
-
-**En proceso**
-- [ ] En espera de próxima reunión o respuestas de comentarios generados. 4 Sep 2024 - ? 2024 
-
-**Planteadas a futuro**
-- [ ] .
-## Intercomunicación 
 Pluto SDR deberá de comunicarse mediante un HUB de puertos USB, y colocando el código dentro de una memoria, deberá de hacer las interacciones SPI e I2C con otros módulos, para poder llevar algoritmos dentro del mismo.
 
 **Status Actual**
 
 Se ha logrado que el Pluto SDR desarrolle códigos desde una memoria USB.
-Se empieza a realizar pruebas de intentar comunicar al módulo SPI 
+Se empieza a realizar pruebas de intentar comunicar al módulo USB - SṔI (MCP2210)
 
 **Actividades desarrolladas**
 - [x] Intento de ejecutar códigos ADCS en Pluto SDR (solo una prueba de un código) *5 Agosto 2024 - 20 Agosto 2024*
 - [x] Primeras pruebas de PlutoSDR arrancando con códigos en puerto USB. (USB OTG) *19 Agosto - 20 Agosto 2024*
-      
+- [x] Revisión de repositorio anterior y generar dudas mas anotaciones para próxima reunión. *27 Agosto - 4 Septiembre 2024*
+- [x] Investigación de funcionamiento módulo MCP2210 realizada. *12 al 13 Septiembre 2024*
+- [x] Primeras pruebas con MCP2210 de repositorio Dereum, comentarios ya desarrollados y presentados en reunión *Jueves 12 Septiembre - Martes 17 Septiembre 2024*
+
 **En proceso**
-- [ ] Periodo de investigación para conocer como conectar entre módulos mencionados. *19 Agosto - ? 2024*
+- [ ] Aprendiendo y desarrollando documento MakeFile para intentar compilar comunicación básica con MCP2210 *19 Septiembre - ?* 
+- [ ] Periodo de investigación y desarrollo de trabajo para conectar entre módulos mencionados y plutoSDR. *19 Agosto - ? 2024*
+- [ ] Investigación de funcionamiento para módulo CPP112-USB a SMBus I2C *19 Agosto - ? 2024*
+- [ ] Investigación para conocer como conectar entre módulos mencionados y plutoSDR. *19 Agosto - ? 2024*
+- [ ] En espera de próxima reunión o respuestas de comentarios generados. 4 Sep 2024 - ? 2024 
 
 **Planteadas a futuro**
-- [ ] Primera prueba con módulos ( no se donde están 4 Sep 2024)
-
+- [ ] .
 
 ## Comenzando
 Instrucciones para iniciar a trabajar en el Proyecto KOTO. 
