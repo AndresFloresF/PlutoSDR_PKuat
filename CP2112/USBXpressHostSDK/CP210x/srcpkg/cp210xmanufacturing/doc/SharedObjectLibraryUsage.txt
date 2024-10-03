@@ -1,0 +1,18 @@
+See more details at http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html
+
+To link against a shared object library (.so) using -l<libraryname>:
+1. Install the library to /usr/local/lib:
+
+	$ sudo make install
+
+To run an executable that was built against the shared object library (.so):
+1. Set the library path to /usr/local/lib before running the executable
+   example: export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+To list the dependencies of an object file or binary:
+example: ldd main
+
+To view a list of exported symbols from an object file or library:
+example: nm -D libcp210xmanufacturing.so.1.0
+example (paginate displayed results): nm -D libcp210xmanufacturing.so.1.0 | less
+

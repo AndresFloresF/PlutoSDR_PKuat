@@ -1,0 +1,89 @@
+cp210xmanufacturing library and Linux FAQ
+==================================================
+
+This document provides information on how to build and use the 
+CP210xManufacturing library for linux.
+
+This document describes procedures that apply to Ubuntu Linux distributions.
+Exact procedures and commands may differ for your specific distribution.
+
+FAQ
+---
+
+Q?: How do I link to the cp210xmanufacturing library?
+
+A?: The library is installed (by default) in /usr/local/lib. Therefore you can add 
+	these two flags to your compiler command:
+		-L/usr/local/lib -lcp210xmanufacturing
+
+		This will link your executable with the cp210xmanufacturing library
+		and will allow g++ to find the library.
+
+Q?: Why is my device not recognized when calling CP210x_GetNumDevices()?
+
+A?: It could be a permissions problem. Try running your program as root. 
+	If the device is recognized when your program is run as root but not when
+	run with normal permissions, the SiliconLabs.rules file may not be 
+	installed properly.
+
+	root should always have read/write permissions to USB device files.
+
+	To automatically grant global read/write permissions to all USB devices with the
+	Silicon Labs Vendor ID (0x10c4), copy the SiliconLabs.rules file to
+	/etc/udev/rules.d/:
+
+	$ sudo cp SiliconLabs.rules /etc/udev/rules.d/
+
+	Refer to SiliconLabs.rules for more information. Also it may be necessary to
+	create your own udev rules file by modifying SiliconLabs.rules to include
+	your own Vendor ID and optionally Product ID.
+
+	A8:3 The udev rules file may not have been applied. udev should monitor the
+	/etc/udev/rules.d/ directory for new rules file, but this does not always work.
+	You may need to unplug/replug your device and possibly reboot for the udev
+	rule to take affect.
+
+Q1: Why does the 
+
+
+Q?: Why do I get the following error when trying to build libcp210xmanufacturing?
+
+Package libusb-1.0 was not found in the pkg-config search path.
+
+A2: The libslabhidtouart library requires libusb-1.0-0.dev to be installed.
+This will copy the libusb-1.0 library and include files and register the
+package with pkg-config.
+
+On Ubuntu, install libusb-1.0-0-dev:
+$ sudo apt-get install libusb-1.0-0-dev
+
+
+Q3: Why do I get the following error when trying to build libcp210xmanufacturing?
+
+g++: not found
+
+A3: The libslabhidtouart library requires gcc, g++, and ld to compile and build
+the library.
+
+On Ubuntu, install g++:
+$ sudo apt-get install g++
+
+- or -
+
+To install a g++ package with support for 32-bit and 64-bit builds:
+$ sudo apt-get install g++-multilib
+
+
+A12: Use the file command to display the binary format
+
+$ file libslabhidtouart.so.1.0
+
+
+Q13: I've done everything here and I still can't build using make
+
+A13: Sometimes you might need to rebuild the project after installing new
+header files and libraries or to rebuild object files.
+
+$ make clean
+$ make
+
