@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <time.h>
 #include "SLABHIDDevice.h"
 #include "SLABCP2112.h"
 
@@ -36,10 +37,43 @@ int main(int argc, char *argv[])
 
     printf("Puerto Configurado \n");
 
-    HidSmbus_WriteRequest(connectedDevice, 0x20 , unsigned char byteArray[] {0xF4, 0X2E},2);
-    delay(5);
-    HidSmbus_AddressReadRequest(connectedDevice,0x20,);
+    /*HidSmbus_WriteRequest(connectedDevice, 0x20 , 0x2C ,1);
+    int miliseconds = 10;
+    clock_t starttime = clock();
+    while (clock() < starttime+miliseconds)
+    {
+        ;
+    }*/
+    BYTE status = 0x2C;
+    int bytestoRead = 25;
+    BYTE buffer[62]={0};
+    BYTE valdata[]={0};
+    BYTE targetadress[]={0xAA};
+    HidSmbus_AddressReadRequest(connectedDevice,0xEE,bytestoRead,0x01,targetadress);
+    HidSmbus_ForceReadResponse(connectedDevice,bytestoRead);
 
+    for (int byteslec = 0; byteslec < bytestoRead;  byteslec++)
+    {
+        BYTE leidos = 0;
+        HidSmbus_GetReadResponse(connectedDevice,&status,buffer,0x3E,&leidos);
+         
+        for (int i = 0; i < leidos; i++)
+        {
+            int index = byteslec + i;
+            if ((index>=0) && (index<bytestoRead))
+            {
+                valdata[index]=buffer[i];
+            }
+            byteslec += leidos;
+        }
+        
+    }
+    for (int i = 0; i < 24; i++)
+    {
+        printf("%x\n",valdata[i]);
+    }
+    printf("%x\n",status);
+    printf("Se envio la respuesta \n");
 
     HidSmbus_Close(connectedDevice);
 
